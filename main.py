@@ -13,14 +13,15 @@ from PIL import Image, ImageTk
 
 window = tk.Tk()
 window.title("Tell A Joke")
+window.iconbitmap("Tbh.ico")
 tempimg= Image.open("bgimage.png")
 BGIMAGE = ImageTk.PhotoImage(tempimg)
 BACKGROUND_COLOR="#FEF2FF"
 ACCENT_COLOR="#7eabca"
 DARK_ACCENT_COLOR="#3a6c8f"
 FONT_COLOR="#f8f8ff"
-FONT_FAMILY=("Verdana", 10 )
-FONT_BOLD=("Verdana", 10, "bold")
+FONT_FAMILY=("Century Gothic", 11 )
+FONT_BOLD=("Century Gothic", 11, "bold")
 WIDTH = 500
 HEIGHT = 360
 window.geometry(str(WIDTH)+"x"+str(HEIGHT))
@@ -37,6 +38,8 @@ sent = ""
 
 def send():
     global sent
+    if input.get().lower()[0:18] =="i don't like jokes" :
+        window.destroy()
     text_box.delete("all")
     sent = input.get() +"\n"
     text_box.create_image(10, 10, anchor="center", image=BGIMAGE)
@@ -80,6 +83,6 @@ window.bind('<Return>', hitenter)
 text_box=tk.Canvas(master=scrollable, width=WIDTH)
 text_box.create_image(10,10,anchor="center",image=BGIMAGE)
 
-text_box.create_text(WIDTH/2,HEIGHT/2.5,text="Welcome to boyidiot's totally advanced AI chatbot that will tell you jokes based on what you tell it! Let's get started, hello!", anchor=tk.N, width=WIDTH*(2/3),fill=FONT_COLOR, font=FONT_FAMILY)
+text_box.create_text(WIDTH/2,HEIGHT/3,text="Welcome to boyidiot's totally advanced (not really) AI chatbot that will tell you jokes based on what you tell it! Let's get started, hello!", anchor=tk.N, width=WIDTH*(2/3),fill=FONT_COLOR, font=FONT_FAMILY)
 text_box.pack(fill=tk.BOTH)
 window.mainloop()
