@@ -49,6 +49,7 @@ def send():
     window.after(500, respond)
     input.delete(0,"end")
 
+
 def respond():
     global sent
     if(sent != ""):
