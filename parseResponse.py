@@ -91,6 +91,7 @@ def getResponse(userInput):
         response = "You found my secrets!\n"
         response += " - include 'I'm' in your message\n"
         response += " - say 'yippee'\n"
+        response += " - say 'i don't like jokes'\n"
         response += " - say nothing..."
         return response
 
