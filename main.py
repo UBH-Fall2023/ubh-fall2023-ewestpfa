@@ -70,6 +70,7 @@ input.pack(fill="both", expand=True,padx=2,pady=2)
 enter = tk.Button(text="Send", width = BUTTON_WIDTH, height = BUTTON_HEIGHT, command = send, font=FONT_BOLD)
 enter.pack()
 
+
 def hitenter(event):
     send()
 
