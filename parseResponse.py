@@ -84,6 +84,14 @@ def getResponse(userInput):
     if(userInput.rstrip('\n') == ""):
         return "I'm not just talking to hear my own voice you know..."
 
+    if(userInput.rstrip('\n') == "list_secrets"):
+        response = "You found my secrets!\n"
+        response += " - include 'I'm' in your message\n"
+        response += " - say 'yippee'\n"
+        response += " - say nothing..."
+        return response
+
+
 
     inputList = userInput.rstrip('\n').split(' ')
 
@@ -104,6 +112,7 @@ def getResponse(userInput):
         response+= ", I'm boyidiot's Neural Network"
         return response
                 
+    
 
     genericWords = ["me","i","joke","you","he","she","they","ze","him","her","them","are","am","what","how","why","who","where","when","like","and","this"]
     nounList = []
