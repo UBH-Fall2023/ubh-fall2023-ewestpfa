@@ -21,4 +21,5 @@ To run the program:
 
 
 (Disclaimer, as hard as it is to believe, and despite the incredible complexity of this product, **boyidiot's Neural Network** is not an real neural network)
+
 (This project was possible thanks to the icanhazdadjoke.com and api.dictionaryapi.dev APIs and was implemented using the tkinter, pillow, cx_freeze, and requests Python libraries)
