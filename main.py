@@ -2,7 +2,6 @@
 
 import tkinter as tk
 import parseResponse as pr
-import time
 window = tk.Tk()
 window.title("Tell A Joke")
 
@@ -16,10 +15,11 @@ BUTTON_HEIGHT = 1
 BUTTON_WIDTH = 20
 INPUT_WIDTH = 50
 BACKGROUND_COLOR="#FFFFFF"
-send = ""
+sent = ""
 
 
 def send():
+    global sent
     text_box.delete("all")
     sent = input.get() +"\n"
     text_box.create_text(window.winfo_width()*.9,window.winfo_height()*.2,text=sent, width=(window.winfo_width())*2/3, anchor=tk.E)
@@ -28,8 +28,9 @@ def send():
 
 
 def respond():
-    global send
-    response = (send)
+    global sent
+    if(sent != ""):
+        response = pr.getResponse(sent)
     text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2, text=response, width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.pack(fill=tk.BOTH)
 
