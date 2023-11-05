@@ -22,6 +22,7 @@ def send():
     global sent
     text_box.delete("all")
     sent = input.get() +"\n"
+    text_box.create_text(window.winfo_width()*.9,window.winfo_height()*.1,text="You: ", anchor=tk.E)
     text_box.create_text(window.winfo_width()*.9,window.winfo_height()*.2,text=sent, width=(window.winfo_width())*2/3, anchor=tk.E)
     text_box.pack(fill=tk.BOTH)
     window.after(500, respond)
@@ -31,12 +32,12 @@ def respond():
     global sent
     if(sent != ""):
         response = pr.getResponse(sent)
+    text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2.5, text="boyidiot's Neural Network: ", width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2, text=response, width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.pack(fill=tk.BOTH)
 
 
-
-hello = tk.Label(text="")
+hello = tk.Label(text="Hi, I'm ")
 hello.pack()
 chatframe.pack()
 inputLabel = tk.Label(text="↓ Talk to me and I'll tell you a joke! ↓")
