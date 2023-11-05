@@ -50,6 +50,9 @@ input.pack(fill=tk.BOTH)
 enter = tk.Button(text="Send", width = BUTTON_WIDTH, height = BUTTON_HEIGHT, command = send)
 enter.pack()
 
+
+
+
 text_box=tk.Canvas(master=scrollable, width=LEFTRIGHT_WIDTH)
 
 window.mainloop()
