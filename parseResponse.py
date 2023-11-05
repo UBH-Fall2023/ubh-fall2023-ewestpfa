@@ -73,6 +73,19 @@ def formatNewline(phrase):
 def getResponse(userInput):
     #find nouns in user's input
     inputList = userInput.split(' ')
+
+    if 'i\'m' in inputList or 'I\'m' in inputList:
+        afterIntro=False
+        response = "Hi,"
+        for word in inputList:
+            if(afterIntro):
+                response += " "+word
+            if word == 'i\'m' or word == 'I\'m':
+                afterIntro = True
+        response+= ", I'm boyidiot's Neural Network"
+        return response
+                
+
     nounList = []
     topic = ""
     for word in inputList:
