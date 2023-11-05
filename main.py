@@ -1,5 +1,12 @@
 ##boyidiot all rights reserved
 
+'''
+DISCLAIMER:
+        This project's GUI is based on the tkinter interface
+
+        We do not own this interface and are using it for non-commercial purposes
+'''
+
 import tkinter as tk
 import parseResponse as pr
 window = tk.Tk()

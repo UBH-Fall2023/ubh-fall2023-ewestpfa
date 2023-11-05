@@ -7,7 +7,7 @@ DISCLAIMER:
             -icanhazdadjoke.com
             -api.dictionaryapi.dev
             
-        We do not own these domains and are using them for educational purposes
+        We do not own these domains and are using them for non-commercial purposes
 '''
 
 JOKE_HEADER = {'Accept': 'application/json'}
@@ -80,11 +80,16 @@ def formatNewline(phrase):
 #Returns a string contating a dad joke based on user input
 def getResponse(userInput):
     #find nouns in user's input
+
+    if(userInput.rstrip('\n') == ""):
+        return "I'm not just talking to hear my own voice you know..."
+
+
     inputList = userInput.rstrip('\n').split(' ')
 
     yip = "https://youtu.be/rxSoUkwP65M?si=k6Fe_qMrU6jOWyty"
     if len(inputList) >= 1 and len(inputList[0])>= 6 and inputList[0][0:6] == "yippee":
-        response = "I think you should check this out: "+yip
+        response = "\nI think you should check this out: "+yip
         return response
 
 
@@ -102,7 +107,6 @@ def getResponse(userInput):
 
     genericWords = ["me","i","joke","you","he","she","they","ze","him","her","them","are","am","what","how","why","who","where","when","like","and"]
     nounList = []
-    topic = ""
     for word in inputList:
         nounResponse = requests.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+word)
         if(nounResponse.status_code != 200):
