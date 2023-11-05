@@ -100,7 +100,6 @@ def getResponse(userInput):
     if(jokeResponse == None):
         jokeResponse = getGeneric()
 
-    jokeResponse = formatNewline(jokeResponse)
     return jokeResponse
 
 def main():
@@ -110,6 +109,7 @@ def main():
     while(userInput != 'quit'):
 
         jokeResponse = getResponse(userInput)
+        jokeResponse = formatNewline(jokeResponse)
         
         print("[DadBot]: "+ jokeResponse)
 
