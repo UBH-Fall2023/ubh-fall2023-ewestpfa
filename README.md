@@ -3,9 +3,9 @@
 
 # Well fret no more!!
 With **boyidiot's Neural Network**, you can experience the comforting feeling of the classic paternal quips...
-You can say anything, and our NN will cleverly responsd with a topical jest
+You can say anything, and our NN will cleverly responds with a topical jest
 
-Simply run the program, and bada-bing bada-boom! **boyidiot's Neural Network** is up and running
+Simply run the program and bada-bing bada-boom! **boyidiot's Neural Network** is up and running
 
 To run the program:
 - If you are on Windows:
