@@ -1,7 +1,7 @@
-##Are you ever feeling lonely?
-##Do you ever find yourself missing the comforting familiarity of your father?
+## Are you ever feeling lonely?
+## Do you ever find yourself missing the comforting familiarity of your father?
 
-#Well fret no more!!
+# Well fret no more!!
 With **boyidiot's Neural Network**, you can experience the comforting feeling of the classic paternal quips...
 You can say anything, and our NN will cleverly responsd with a topical jest
 
