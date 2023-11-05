@@ -5,7 +5,7 @@
 With **boyidiot's Neural Network**, you can experience the comforting feeling of the classic paternal quips...
 You can say anything, and our NN will cleverly responsd with a topical jest
 
-Simply open your terminal and run _main.py_, and bada-bing bada-boom! **boyidiot's Neural Network** is up and running
+Simply run the program, and bada-bing bada-boom! **boyidiot's Neural Network** is up and running
 
 To run the program:
 - If you are on Windows:
@@ -21,3 +21,4 @@ To run the program:
 
 
 (Disclaimer, as hard as it is to believe, and despite the incredible complexity of this product, **boyidiot's Neural Network** is not an real neural network)
+(This project was possible thanks to the icanhazdadjoke.com and api.dictionaryapi.dev APIs and was implemented using the tkinter, pillow, and requests Python libraries)
