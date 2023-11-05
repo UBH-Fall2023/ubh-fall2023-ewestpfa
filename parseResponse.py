@@ -121,7 +121,7 @@ def getResponse(userInput):
                 
     
 
-    genericWords = ["me","i","joke","you","he","she","they","ze","him","her","them","are","am","what","how","why","who","where","when","like","and","this"]
+    genericWords = ["me","i","joke","you","he","she","they","ze","him","her","them","are","am","what","how","why","who","where","when","like","and","this","wnat","need"]
     nounList = []
     for word in inputList:
         nounResponse = requests.get("https://api.dictionaryapi.dev/api/v2/entries/en/"+word)
