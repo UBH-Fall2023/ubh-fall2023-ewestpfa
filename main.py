@@ -10,7 +10,6 @@ window.geometry("500x360")
 window.resizable(False,False)
 chatframe = tk.Frame(window)
 scrollable = tk.Canvas(chatframe)
-LEFTRIGHT_WIDTH =500
 BUTTON_HEIGHT = 1
 BUTTON_WIDTH = 20
 INPUT_WIDTH = 50
@@ -26,7 +25,7 @@ def send():
     text_box.create_text(window.winfo_width()*.9,window.winfo_height()*.2,text=sent, width=(window.winfo_width())*2/3, anchor=tk.E)
     text_box.pack(fill=tk.BOTH)
     window.after(500, respond)
-
+    input.delete(0,"end")
 
 def respond():
     global sent
@@ -35,6 +34,7 @@ def respond():
     text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2.5, text="boyidiot's Neural Network: ", width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2, text=response, width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.pack(fill=tk.BOTH)
+
 
 
 chatframe.pack()
@@ -48,7 +48,11 @@ input.pack(fill=tk.BOTH)
 enter = tk.Button(text="Send", width = BUTTON_WIDTH, height = BUTTON_HEIGHT, command = send)
 enter.pack()
 
-text_box=tk.Canvas(master=scrollable, width=LEFTRIGHT_WIDTH)
-text_box.create_text(chatframe.winfo_width()/2,chatframe.winfo_height()/2,text="Welcome to boyidiot's totally advanced AI chatbot that will tell you jokes based on what you tell it! Let's get started, hello!", anchor=tk.N, width=window.winfo_width()*2/3)
+def hitenter(event):
+    send()
+window.bind('<Return>', hitenter)
+
+text_box=tk.Canvas(master=scrollable, width=WIDTH)
+text_box.create_text(WIDTH/2,HEIGHT/2.5,text="Welcome to boyidiot's totally advanced AI chatbot that will tell you jokes based on what you tell it! Let's get started, hello!", anchor=tk.N, width=WIDTH*(2/3))
 text_box.pack(fill=tk.BOTH)
 window.mainloop()

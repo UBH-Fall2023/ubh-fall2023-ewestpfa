@@ -81,7 +81,13 @@ def formatNewline(phrase):
 #Returns a string contating a dad joke based on user input
 def getResponse(userInput):
     #find nouns in user's input
-    inputList = userInput.split(' ')
+    inputList = userInput.rstrip('\n').split(' ')
+
+    yip = "https://youtu.be/rxSoUkwP65M?si=k6Fe_qMrU6jOWyty"
+    if len(inputList) >= 1 and len(inputList[0])>= 6 and inputList[0][0:6] == "yippee":
+        response = "I think you should check this out: "+yip
+        return response
+
 
     if 'i\'m' in inputList or 'I\'m' in inputList:
         afterIntro=False
