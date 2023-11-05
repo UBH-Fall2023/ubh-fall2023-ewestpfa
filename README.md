@@ -7,8 +7,12 @@ You can say anything, and our NN will cleverly responsd with a topical jest
 
 Simply open your terminal and run _main.py_, and bada-bing bada-boom! **boyidiot's Neural Network** is up and running
 
-(To make sure your program runs correctly, make sure you have the most recent version of Python installed, as well as the requests package)
+To run the program:
+- Make sure you have the most recent version of python installed
+- Make sure you have the requests library installed ('pip install requests')
+- Mase sure you have tkinter installed ('pip install tkinter')
+- Make sure you have the pillow library installed ('pip install pillow')
 
-(If the requests packing is not installed, run 'pip install requests' in your terminal)
+
 
 (Disclaimer, as hard as it is to believe, and despite the incredible complexity of this product, **boyidiot's Neural Network** is not an real neural network)
