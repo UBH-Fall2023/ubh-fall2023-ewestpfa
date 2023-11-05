@@ -79,12 +79,15 @@ def formatNewline(phrase):
 
 #Returns a string contating a dad joke based on user input
 def getResponse(userInput):
-    #find nouns in user's input
 
-    if(userInput.rstrip('\n') == ""):
+    endChars = ['\n','.','!','?',',',':',';','-']
+    for char in endChars:
+        userInput = userInput.rstrip(char)
+
+    if(userInput == ""):
         return "I'm not just talking to hear my own voice you know..."
 
-    if(userInput.rstrip('\n') == "list_secrets"):
+    if(userInput == "list_secrets"):
         response = "You found my secrets!\n"
         response += " - include 'I'm' in your message\n"
         response += " - say 'yippee'\n"
@@ -94,6 +97,9 @@ def getResponse(userInput):
 
 
     inputList = userInput.rstrip('\n').split(' ')
+    for idx in range(len(inputList)):
+        for char in endChars:
+            inputList[idx] = inputList[idx].rstrip(char)
 
     yip = "https://youtu.be/rxSoUkwP65M?si=k6Fe_qMrU6jOWyty"
     if len(inputList) >= 1 and len(inputList[0])>= 6 and inputList[0][0:6] == "yippee":
