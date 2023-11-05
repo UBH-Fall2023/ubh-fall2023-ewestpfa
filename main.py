@@ -13,7 +13,10 @@ from PIL import Image, ImageTk
 
 window = tk.Tk()
 window.title("Tell A Joke")
-window.iconbitmap("icons/Tbh.ico")
+try:
+    window.iconbitmap("icons/Tbh.ico")
+except:
+    pass
 tempimg= Image.open("bgimage.png")
 BGIMAGE = ImageTk.PhotoImage(tempimg)
 BACKGROUND_COLOR="#FEF2FF"
