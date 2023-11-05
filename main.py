@@ -1,8 +1,11 @@
+##boyidiot all rights reserved
+
 import tkinter as tk
 import parseResponse as pr
 import time
 window = tk.Tk()
 window.title("Tell A Joke")
+
 
 window.geometry("500x360")
 window.resizable(False,False)
@@ -32,10 +35,10 @@ def respond():
 
 
 
-hello = tk.Label(text="Want to hear a joke?")
+hello = tk.Label(text="")
 hello.pack()
 chatframe.pack()
-inputLabel = tk.Label(text="Talk to me!")
+inputLabel = tk.Label(text="↓ Talk to me and I'll tell you a joke! ↓")
 scrollable.pack()
 input = tk.Entry(width = INPUT_WIDTH)
 
