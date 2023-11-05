@@ -89,7 +89,7 @@ def getResponse(userInput):
 
     yip = "https://youtu.be/rxSoUkwP65M?si=k6Fe_qMrU6jOWyty"
     if len(inputList) >= 1 and len(inputList[0])>= 6 and inputList[0][0:6] == "yippee":
-        response = "\nI think you should check this out: "+yip
+        response = "I think you should check this out: "+yip
         return response
 
 
