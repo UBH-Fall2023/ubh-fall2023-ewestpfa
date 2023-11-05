@@ -5,8 +5,9 @@ import parseResponse as pr
 window = tk.Tk()
 window.title("Tell A Joke")
 
-
-window.geometry("500x360")
+WIDTH = 500
+HEIGHT = 360
+window.geometry(str(WIDTH)+"x"+str(HEIGHT))
 window.resizable(False,False)
 chatframe = tk.Frame(window)
 scrollable = tk.Canvas(chatframe)
@@ -31,7 +32,7 @@ def respond():
     global sent
     if(sent != ""):
         response = pr.getResponse(sent)
-    text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2.5, text="boyidiot's Neural Network: ", width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
+    text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2.4, text="boyidiot's Neural Network: ", width=(window.winfo_width()) * 2 / 3, anchor=tk.W,fill="#4df0ff")
     text_box.create_text(window.winfo_width() * .1, window.winfo_height() / 2, text=response, width=(window.winfo_width()) * 2 / 3, anchor=tk.W)
     text_box.pack(fill=tk.BOTH)
 
