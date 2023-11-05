@@ -2,6 +2,15 @@ import requests
 import json
 import random
 
+'''
+DISCLAIMER:
+        This project makes use of Open Source APIs
+            -icanhazdadjoke.com
+            -api.dictionaryapi.dev
+            
+        We do not own these domains and are using them for educational purposes
+'''
+
 JOKE_HEADER = {'Accept': 'application/json'}
 PAGE_SIZE = 20
 
@@ -86,6 +95,7 @@ def getResponse(userInput):
         return response
                 
 
+    genericWords = ["me","i","joke","you","he","she","they","ze","him","her","them","are","am","what","how","why","who","where","when","like","and"]
     nounList = []
     topic = ""
     for word in inputList:
@@ -97,7 +107,8 @@ def getResponse(userInput):
             meanings = nounObj[0]["meanings"]
             for idx in range(len(meanings)):
                 if(meanings[idx]["partOfSpeech"] == "noun" or meanings[idx]["partOfSpeech"] == "adjective"):
-                        nounList.append(word)
+                        if not word.lower() in genericWords:
+                            nounList.append(word)
                 elif(meanings[idx]["partOfSpeech"] == "adverb"):
                         nounList.append(word[0:-2])
         except KeyError:
